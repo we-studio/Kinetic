@@ -100,7 +100,7 @@ class PathTweenViewController: ExampleViewController {
 		square.center = start.center
 	}
 	
-	func pathTypeChanged(control: UIControl) {
+    @objc func pathTypeChanged(control: UIControl) {
 		if let control = control as? UISegmentedControl {
 			let type: PathType = control.selectedSegmentIndex == 1 ? .cubic : .quadratic
 			setPathType(type: type)

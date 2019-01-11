@@ -27,7 +27,7 @@ final public class Scheduler {
 	fileprivate lazy var displayLink: CADisplayLink = {
 		let link = CADisplayLink(target: self, selector: #selector(Scheduler.update(_:)))
 		link.isPaused = true
-		link.add(to: .current, forMode: .commonModes)
+        link.add(to: .current, forMode: RunLoop.Mode.common)
 		return link
 	}()
 	fileprivate var lastLoopTime: CFTimeInterval

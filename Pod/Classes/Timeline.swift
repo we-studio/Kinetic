@@ -434,7 +434,7 @@ public class Timeline: Animation {
 			var idx = 1
 			var multiplier: TimeInterval = 1
 			while idx < match.numberOfRanges {
-				let range = match.rangeAt(idx)
+                let range = match.range(at: idx)
 				if range.length <= string.length && range.location < string.length {
 					let val = string.substring(with: range)
 					// label

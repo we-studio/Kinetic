@@ -121,12 +121,12 @@ class PhysicsViewController: ExampleViewController {
 		square.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
 	}
 	
-	func tensionChanged(_ sender: UISlider) {
+    @objc func tensionChanged(_ sender: UISlider) {
 		tensionValue.text = "\(Int(round(sender.value)))"
 		reset()
 	}
 	
-	func frictionChanged(_ sender: UISlider) {
+    @objc func frictionChanged(_ sender: UISlider) {
 		frictionValue.text = "\(Int(round(sender.value)))"
 		reset()
 	}

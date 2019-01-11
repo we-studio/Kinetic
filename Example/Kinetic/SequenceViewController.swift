@@ -59,12 +59,12 @@ class SequenceViewController: ExampleViewController {
 		square.backgroundColor = UIColor.red
 	}
 
-	func slower() {
+    @objc func slower() {
 //		animation?.slower()
 		animation?.slowMo(to: 0.3, duration: 0.5)
 	}
 	
-	func faster() {
+    @objc func faster() {
 		animation?.normal()
 	}
 }
