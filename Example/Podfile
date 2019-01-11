@@ -7,8 +7,3 @@ target 'Kinetic_Example' do
   pod 'Kinetic', :path => '../'
   pod 'WatchdogInspector'
 end
-
-target 'Kinetic_Tests' do
-  pod 'Kinetic', :path => '../'
-  pod 'Nimble', '~> 7.0'
-end

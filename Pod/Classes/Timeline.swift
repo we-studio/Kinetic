@@ -136,7 +136,6 @@ public class Timeline: Animation {
 			}
 			
 			let range = TweenRange(tween: tween, position: pos)
-//			print("timeline - added tween at position \(position) with start time \(range.start), end time \(range.end)")
 			
 			// remove tween from existing timeline (if `timeline` is not nil)... assign timeline to this
 			if let timeline = tween.timeline {

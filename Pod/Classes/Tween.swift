@@ -274,7 +274,6 @@ public class Tween: Animation {
 			var animator = animators[key]
 			
 			if animator == nil {
-//				print("--------- tween.id: \(id) - animator key: \(key) ------------")
 				var from: Property?
 				var to: Property?
 				let type = prop.to ?? prop.from
@@ -328,7 +327,6 @@ public class Tween: Animation {
 				}
 				
 				if let from = from, let to = to {
-//					print("ANIMATION from: \(from), to: \(to)")
 					// update stored from/to property that other tweens may reference
 					propertiesByType[key] = FromToValue(from, to)
 					TweenCache.session.addActiveKeys(keys: [key], toTarget: target)

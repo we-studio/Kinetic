@@ -57,7 +57,6 @@ public class Animation: Animatable, TimeScalable, Repeatable, Reversable, Subscr
 				Scheduler.shared.remove(self)
 				completed.trigger(self)
 //				completed.close(self)
-				print("animation \(id) done")
 				break
 			}
 		}
@@ -177,7 +176,6 @@ public class Animation: Animatable, TimeScalable, Repeatable, Reversable, Subscr
 		}
 				
 		let time = delay + elapsedTimeFromSeekTime(offset)
-//		print("\(self).\(self.id).seek - offset: \(offset), time: \(time), elapsed: \(elapsed), duration: \(duration)")
 		render(time: time)
 		
 		return self
@@ -293,7 +291,6 @@ public class Animation: Animatable, TimeScalable, Repeatable, Reversable, Subscr
 			state = .running
 		}
 		
-//		print("\(self).advance - id: \(id), state: \(state), time: \(time), elapsed: \(elapsed), end: \(end), duration: \(duration), progress: \(progress), cycle: \(cycle)")
 		render(time: elapsed, advance: time)
 	}
 	
@@ -335,7 +332,7 @@ public class Animation: Animatable, TimeScalable, Repeatable, Reversable, Subscr
 		
 		if state == .running && ((direction == .forward && elapsed >= end) || (direction == .reversed && elapsed == 0)) && updatesStateOnAdvance {
 			if shouldRepeat {
-				print("\(self) completed - repeating, reverseOnComplete: \(reverseOnComplete), reversed: \(direction == .reversed), repeat count \(cycle) of \(repeatCount)")
+				
 				cycle += 1
 				if reverseOnComplete {
 					direction = (direction == .forward) ? .reversed : .forward
